@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>Weather & Activity Dashboard</h1>
+            <p>Daily weather and activity report for clients</p>
+        </header>
+
+        <section class="weather-info">
+            <div class="weather-box">Temperature: <span id="temperature">13.9°C</span></div>
+            <div class="weather-box">Humidity: <span id="humidity">50%</span></div>
+            <div class="weather-box">Wind Speed: <span id="wind-speed">14.8 kn</span></div>
+            <div class="weather-box">Pressure: <span id="pressure">1014.7 mbar</span></div>
+            <!-- Add more weather data as needed -->
+        </section>
+
+        <section class="manual-entries">
+            <h2>Manual Data Entries</h2>
+            <div>
+                <label for="entry1">Entry 1:</label>
+                <input type="text" id="entry1" placeholder="Enter data...">
+            </div>
+            <div>
+                <label for="entry2">Entry 2:</label>
+                <input type="text" id="entry2" placeholder="Enter data...">
+            </div>
+            <div>
+                <label for="entry3">Entry 3:</label>
+                <input type="text" id="entry3" placeholder="Enter data...">
+            </div>
+            <div>
+                <label for="entry4">Entry 4:</label>
+                <input type="text" id="entry4" placeholder="Enter data...">
+            </div>
+            <button onclick="generateReport()">Generate PDF Report</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
